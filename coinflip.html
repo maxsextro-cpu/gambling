@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Flip</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="coinflip">
+    <main class="container">
+      <section class="card">
+        <h1>Coin Flip Game</h1>
+        <p class="balance">Current Deposit: <span data-balance>$0.00</span></p>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div style="flex: 1; min-width: 180px">
+            <label for="bet-amount">Bet amount</label>
+            <input id="bet-amount" type="number" min="0.01" step="0.01" placeholder="25.00" />
+          </div>
+          <div style="flex: 1; min-width: 180px">
+            <label for="guess-side">Pick side</label>
+            <select id="guess-side">
+              <option value="Heads">Heads</option>
+              <option value="Tails">Tails</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="coin" id="coin">?</div>
+        <div class="center">
+          <button id="flip-coin" type="button">Flip Coin (1.95x payout)</button>
+          <button id="back-home" class="secondary" type="button">Back to Home</button>
+          <p id="flip-result" class="message"></p>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

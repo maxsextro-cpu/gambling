@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casino Chips</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="casinos">
+    <main class="container">
+      <section class="card">
+        <h1>Casino Chips</h1>
+        <p class="balance">Current Deposit: <span data-balance>$0.00</span></p>
+      </section>
+
+      <section class="card">
+        <h2>Casinos Near Tuscaloosa, AL</h2>
+        <div id="casino-list" class="casino-list"></div>
+        <input type="hidden" id="selected-casino" />
+      </section>
+
+      <section class="card">
+        <label for="chip-amount">How much of your deposit do you want in chips?</label>
+        <input id="chip-amount" type="number" min="0.01" step="0.01" placeholder="Enter chip amount" />
+        <div class="row" style="margin-top: 12px">
+          <button id="get-chips" type="button">Generate Chip Barcode</button>
+          <button id="back-home" class="secondary" type="button">Back to Home</button>
+        </div>
+      </section>
+
+      <section class="card center" id="barcode-block" hidden>
+        <h2>Your Chip Code</h2>
+        <svg id="chip-barcode"></svg>
+        <p id="chip-code-fallback" class="mono" hidden></p>
+        <p id="barcode-instructions" class="message"></p>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

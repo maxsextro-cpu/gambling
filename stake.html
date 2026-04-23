@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stake Deposit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="stake">
+    <main class="container">
+      <section class="card">
+        <h1>Stake Deposit</h1>
+        <p class="balance">Current Deposit: <span data-balance>$0.00</span></p>
+        <p>
+          Current 1-Month Treasury Bill Yield:
+          <strong id="treasury-yield">Loading...</strong>
+        </p>
+      </section>
+
+      <section class="card">
+        <label for="stake-amount">How much do you want to stake?</label>
+        <input id="stake-amount" type="number" min="0.01" step="0.01" placeholder="Enter amount" />
+        <p>
+          Estimated 1-month staking return:
+          <strong id="expected-payout">$0.00</strong>
+        </p>
+        <div class="row">
+          <button id="confirm-stake" type="button">Confirm Staking</button>
+          <button id="back-home" class="secondary" type="button">Back to Home</button>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depository Gambling Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <main class="container">
+      <section class="card">
+        <h1>Online Depository Gambling Demo</h1>
+        <p class="subtle">Deposit fake money and choose where to use it.</p>
+        <p class="balance">Current Deposit: <span data-balance>$0.00</span></p>
+      </section>
+
+      <section class="card">
+        <h2>Add Fake Deposit</h2>
+        <form id="deposit-form" class="row">
+          <div style="flex: 1; min-width: 200px">
+            <label for="deposit-amount">Deposit amount</label>
+            <input id="deposit-amount" type="number" min="0.01" step="0.01" placeholder="100.00" required />
+          </div>
+          <div style="align-self: flex-end">
+            <button type="submit">Deposit</button>
+          </div>
+          <div style="align-self: flex-end">
+            <button class="danger" id="reset-balance" type="button">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Choose an Option</h2>
+        <div class="option-grid">
+          <div class="option-card">
+            <h3>Stake Deposit</h3>
+            <p class="subtle">Stake part of your deposit at 1-month T-bill yield.</p>
+            <a class="button-link option-nav" data-requires-balance href="stake.html">Open</a>
+          </div>
+          <div class="option-card">
+            <h3>Casino Chips</h3>
+            <p class="subtle">Choose a nearby casino and convert deposit to chips.</p>
+            <a class="button-link option-nav" data-requires-balance href="casinos.html">Open</a>
+          </div>
+          <div class="option-card">
+            <h3>Coin Flip</h3>
+            <p class="subtle">Bet part of your deposit with 1.95x payout on win.</p>
+            <a class="button-link option-nav" data-requires-balance href="coinflip.html">Open</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
