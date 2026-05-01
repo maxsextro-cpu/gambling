@@ -87,7 +87,7 @@ function initHome() {
     event.preventDefault();
     const value = Number(input.value);
     if (!Number.isFinite(value) || value <= 0) {
-      notify("Enter a valid fake deposit amount.");
+      notify("Enter a valid deposit amount.");
       return;
     }
     const updated = readBalance() + value;
